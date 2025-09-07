@@ -15,21 +15,37 @@ def zoom(data):
     return img
 
 
+def transpose(data):
+    """
+    Transposes the image by swapping its rows and columns.
+    """
+
+    h, w = data.shape
+    transposed = np.empty((w, h), dtype=data.dtype)
+    for i in range(h):
+        for j in range(w):
+            transposed[j, i] = data[i, j]
+    return transposed
+
+
 def main():
     """Main function to load, process, and display the image."""
 
     data = ft_load("animal.jpeg")
     if data.size == 0:
         exit(1)
-    print("The shape of image is:", data.shape)
-    print(data)
 
     img = zoom(data)
 
     img = img.convert("L")
     data = np.asarray(img)[..., np.newaxis]
 
-    print("New shape after slicing:", data.shape, "or", data.shape[:-1])
+    print("The shape of image is:", data.shape, "or", data.shape[:-1])
+    print(data)
+
+    data = transpose(data.squeeze())
+
+    print("New shape after Transpose:", data.shape[:-1])
     print(data)
 
     plt.imshow(data.squeeze(), cmap='gray')

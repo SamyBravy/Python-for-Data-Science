@@ -1,5 +1,6 @@
 def ft_tqdm(lst: range) -> None:
     """Displays a progress bar in the terminal while iterating over a list."""
+
     if len(lst) == 0:
         return
 

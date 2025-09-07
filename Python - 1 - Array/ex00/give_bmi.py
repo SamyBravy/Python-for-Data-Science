@@ -3,6 +3,7 @@ import numpy as np
 
 def lst_check_int_float(lst):
     """Check if the input is a list of int or float."""
+
     if not isinstance(lst, list):
         print("Error: Input is not a list")
         return False
@@ -15,6 +16,7 @@ def lst_check_int_float(lst):
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
     """Calculate BMI from height and weight lists."""
+
     if not lst_check_int_float(height):
         return []
     if not lst_check_int_float(weight):
@@ -32,6 +34,7 @@ def give_bmi(height: list[int | float],
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     """Check if each BMI value exceeds the given limit."""
+
     if not isinstance(limit, int):
         print("Error: limit should be an integer")
         return []

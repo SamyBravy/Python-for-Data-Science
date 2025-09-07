@@ -3,6 +3,7 @@ import sys
 
 def toMorse(c):
     """Convert a character to Morse code."""
+
     NESTED_MORSE = {
                         " ": "/ ",
                         "A": ".- ",
@@ -47,6 +48,7 @@ def toMorse(c):
 
 def main():
     """Main function that prints the Morse code of the input string."""
+
     if len(sys.argv) != 2:
         print("AssertionError: the arguments are bad")
         sys.exit(1)

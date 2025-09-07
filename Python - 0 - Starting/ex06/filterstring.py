@@ -4,6 +4,7 @@ from ft_filter import ft_filter
 
 def main():
     """Main function to filter strings based on length."""
+
     if len(sys.argv) != 3:
         print("AssertionError: the arguments are bad")
         sys.exit(1)

@@ -6,6 +6,7 @@ def slice_me(family: list, start: int, end: int) -> list:
     Prints the shape of the array, slices it
     and returns the sliced array as a list
     """
+
     if not isinstance(start, int) or not isinstance(end, int):
         print("Error: start and end must be integers")
         return []

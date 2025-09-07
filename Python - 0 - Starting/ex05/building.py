@@ -3,6 +3,7 @@ import sys
 
 def handle_input():
     """Handle input from the user or command line arguments."""
+
     if len(sys.argv) > 2:
         print("AssertionError: more than one argument is provided")
         sys.exit(1)
@@ -22,6 +23,7 @@ def handle_input():
 
 def main():
     """Receive a string, count types of characters, and display results."""
+
     text = handle_input()
 
     uppers = lowers = puncts = digits = spaces = 0

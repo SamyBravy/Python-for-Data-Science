@@ -27,5 +27,7 @@ def ft_load(path: str) -> np.ndarray:
         return np.array([])
     with Image.open(path) as img:
         array_img = np.asarray(img)
+        print("The shape of image is:", array_img.shape)
+        print(array_img)
 
     return array_img
