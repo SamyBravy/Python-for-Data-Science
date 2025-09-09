@@ -10,9 +10,10 @@ def main():
         return
 
     try:
-        italy = csv[csv["country"] == "Italy"]
-        values = italy.iloc[0, 1:].astype(float)
-        years = csv.columns[1:].astype(int)
+        csv.set_index("country", inplace=True)
+
+        values = csv.loc["Italy"].astype(float)
+        years = csv.columns.astype(int)
 
         plt.plot(years, values)
         plt.title("Italy Life expectancy Projections")
