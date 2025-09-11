@@ -2,7 +2,7 @@ def square(x: int | float) -> int | float:
     """Returns the square of x."""
 
     if isinstance(x, (int, float)):
-        return x**2
+        return float(x**2)
     else:
         print("Error: Input must be an integer or float.")
         return None
