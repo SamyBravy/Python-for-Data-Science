@@ -26,7 +26,7 @@ def callLimit(limit: int):
                 return func(*args, **kwds)
             else:
                 print(f"Error: <function '{func.__name__}' at 0x{id(func):x}>\
-                      call too many times")
+call too many times")
 
         return limit_function
 
