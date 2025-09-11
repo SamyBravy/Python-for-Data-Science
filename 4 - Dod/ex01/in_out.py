@@ -34,6 +34,8 @@ def outer(x: int | float, function) -> object:
     count = x
 
     def inner() -> float:
+        """Applies the function to count and updates count."""
+
         nonlocal count
         count = function(count)
         return count
